@@ -14,7 +14,7 @@ import ExitToAppIcon from "@mui/icons-material/ExitToApp";
 import ChatIcon from '@mui/icons-material/Chat';
 import ReviewsIcon from '@mui/icons-material/Reviews';
 
-const Sidenav = () => {
+const SidenavVolunteer = () => {
   
   return (
     <div className="flex flex-col border-r border-gray-200 bg-[#29292d] min-h-screen w-60">
@@ -45,7 +45,7 @@ const Sidenav = () => {
           <Link to="/addevents" style={{ textDecoration: "none" }}>
             <li className='flex items-center px-1.25 py-1.25 cursor-pointer  mb-7'>
               <StoreIcon className="text-base text-[#785f24]" />
-              <span className="text-xl font-semibold text-gray-600 ml-2.5">Add Event</span>
+              <span className="text-xl font-semibold text-gray-600 ml-2.5">Documents</span>
             </li>
           </Link>
           <Link to="/Orders" style={{ textDecoration: "none" }}>
@@ -74,4 +74,4 @@ const Sidenav = () => {
   );
 };
 
-export default Sidenav;
+export default SidenavVolunteer;

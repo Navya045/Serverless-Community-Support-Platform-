@@ -2,8 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import LoginNavBar from '../components/LoginNavBar';
 import { secureFetch } from '../helper/SecureFetch';
-import CardDataStats from '../components/CardDataStats';
-import BarChart from '../components/BarChart';
+
 
 
 
@@ -138,21 +137,7 @@ const UserProfile = () => {
           </div>
         </div>
         {/* Statistics and Chart */}
-        <div className="mt-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            <CardDataStats title="Total Orders" total={`${stats.number_of_orders}`} >
-              <p className="text-2xl font-bold text-[#00df9a] mb-6">{stats.number_of_orders}</p>
-            </CardDataStats>
-            <CardDataStats title="Total Spend" total={`$${stats.total_spend}`} >
-            <p>{stats.total_spend}</p>
-            </CardDataStats>
-            <CardDataStats title="Average Cost" total={`$${stats.average_cost_per_order}`} >
-            <p className="text-2xl font-bold text-[#00df9a] mb-6">{stats.average_cost_per_order}</p>
-            </CardDataStats>
-            <CardDataStats title="Delivered Orders" total={`${stats.delivered}`} >
-            <p>{stats.delivered}</p>
-            </CardDataStats>
-          </div>
+        
           <div className="bg-white p-6 rounded-lg shadow-lg mt-6 w-full max-w-2xl">
   <h2 className="text-2xl font-bold mb-4 ">Recent Order </h2>
   {stats.last_order ? (
@@ -167,12 +152,10 @@ const UserProfile = () => {
 </div>
 
 
-          <div className="mt-8">
-            <BarChart data={chartData} />
-          </div>
+          
         </div>
       </div>
-    </div>
+
   );
 };
 

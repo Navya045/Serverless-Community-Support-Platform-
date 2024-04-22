@@ -13,7 +13,7 @@ import NewEmp from './pages/NewEmp.jsx';
 import MapView from './pages/MapView.jsx';
 import VerifyUser from './pages/VerifyUser.tsx';
 import User from './pages/user.jsx'
-import Addservice from './pages/Addservice.jsx'
+import Addevents from './pages/AddEvents.jsx'
 import ResetPassword from './pages/ResetPassword.jsx';
 import UserProfile from './pages/UserProfile.jsx'; 
 import TrackOrder from './pages/TrackOrder.jsx'; 
@@ -62,7 +62,7 @@ const App = () => {
             <Route path="/Login" element={<LoginForm />} />
             <Route path='/Register' element={<Signup />} />
             <Route path="/verification" element={<VerifyUser />} />
-            <Route path="/addservice" element={<Addservice />} />
+            <Route path="/addevents" element={<Addevents />} />
             <Route path="/resetpassword" element={<ResetPassword />} />
             <Route path="/user-profile" element={<UserProfile />} />
             <Route path="/track-orders" element={<TrackOrder />} />
@@ -80,6 +80,8 @@ const App = () => {
             <Route path="/register/organize" element={<OrganizationRegister/>} />
             <Route path="/register/volunteer" element={<VolunteerRegister/>} />
             <Route path="/Events" element={<Events/>} />
+            
+
 
        </Routes>
         </GoogleOAuthProvider>

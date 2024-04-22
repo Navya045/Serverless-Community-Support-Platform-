@@ -22,6 +22,7 @@ const LoginSignup = () => {
     "In what city were you born?",
   ];
 
+
   const [actualSecurityAnswer, setActualSecurityAnswer] = useState('');
   const [userSecurityAnswer, setUserSecurityAnswer] = useState('');
   const handleSignUp = async () => {

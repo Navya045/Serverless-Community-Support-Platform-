@@ -12,7 +12,7 @@ const Chatbot = ({ isOpen }) => {
       setInputValue('');
       // Simulate a response from the chatbot
       setTimeout(() => {
-        setMessages((prevMessages) => [...prevMessages, { text: "hello , I'm a Virtually Assitant , For tracking order got to 'Track Orders' menu and For chating with manager got to 'Help' menu", direction: 'incoming' }]);
+        setMessages((prevMessages) => [...prevMessages, { text: "hello , I'm a Virtually Assitant , Kindly drop a mail to gatherCloud@trust.com for any quiers and policy related issue. Thank you", direction: 'incoming' }]);
       }, 1000);
     }
   };

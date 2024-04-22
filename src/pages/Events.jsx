@@ -13,6 +13,7 @@ import Fashion from './../assets/Fashion.webp';
 import Navigation from '../components/Navigation';
 import Sidenav from '../components/Sidenav';
 import Adminnav from '../components/Adminnav';
+import { useNavigate } from 'react-router-dom';
 
 const TagsFilter = ({ tags, selectedTags, onTagToggle }) => {
   return (
@@ -36,6 +37,13 @@ const TagsFilter = ({ tags, selectedTags, onTagToggle }) => {
 };
 
 const Events = () => {
+  const [selectedEvent, setSelectedEvent] = useState(null);
+
+  const navigate = useNavigate();
+  const handleOrderClick = (selectedEvent) => {
+    navigate('/Cart', { state: { selectedEvent } });
+  };
+
   const [events] = useState([
     {
       id: 'event1',
@@ -150,8 +158,8 @@ const Events = () => {
                         </div>
                       </div>
                       <div style={{ marginTop: '10px' }}>
-                        <button style={{ marginRight: '10px', padding: '10px 20px', backgroundColor: '#0056b3', color: 'white', border: 'none', borderRadius: '4px', cursor: 'pointer' }}>View Details</button>
-                        <button style={{ padding: '10px 20px', backgroundColor: '#4CAF50', color: 'white', border: 'none', borderRadius: '4px', cursor: 'pointer' }}>Register</button>
+                        <button style={{ marginRight: '10px', padding: '10px 20px', backgroundColor: '#0056b3', color: 'white', border: 'none', borderRadius: '4px', cursor: 'pointer' }}  onClick={() => handleOrderClick(event)}>View Details</button>
+                        <button style={{ padding: '10px 20px', backgroundColor: '#4CAF50', color: 'white', border: 'none', borderRadius: '4px', cursor: 'pointer' }}  onClick={() => handleOrderClick(event)}>Register</button>
                       </div>
                     </div>
                   </div>
