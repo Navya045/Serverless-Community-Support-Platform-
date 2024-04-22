@@ -3,14 +3,17 @@ import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 
 const orderLocations = [
-  { id: 1, lat: 51.505, lng: -0.09, title: 'Order 1' },
-  { id: 2, lat: 51.515, lng: -0.1, title: 'Order 2' },
-  // Add more orders as needed
+
+    { id: 1, lat: 39.1653, lng: -86.5264, title: 'Bloomington' }, // Bloomington
+    { id: 2, lat: 39.7684, lng: -86.1581, title: 'Indianapolis' }, // Indianapolis
+    { id: 3, lat: 39.1653, lng: -86.4264, title: 'Yellow wood' }, // Bloomington
+    { id: 4, lat: 39.8884, lng: -86.1881, title: 'William creek' }, // Indianapolis
+    { id: 5, lat: 39.9653, lng: -86.5264, title: 'Aerodrome' }  // Bloomington
 ];
 
 const MapView = () => {
   return (
-    <MapContainer center={[51.505, -0.09]} zoom={13} style={{ height: '400px', width: '100%' }}>
+    <MapContainer center={[39.1653, -86.5264]} zoom={11} style={{ height: '500px', width: '100%' }}>
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />

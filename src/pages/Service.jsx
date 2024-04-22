@@ -184,9 +184,7 @@ const Service = () => {
     <div>
       <LoginNavBar />
       <div className="mt-24">
-        <div className="bg-red-500 text-white p-4 text-center">
-          Get 10% off on your first order!Avail it today.
-        </div>
+       
         <div className="p-4">
           <div className="flex items-baseline mb-4">
             <input

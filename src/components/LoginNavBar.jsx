@@ -48,10 +48,10 @@ const LoginNavBar = () => {
 
   return (
     <nav style={{ position: 'fixed', top: 0, width: '100%', zIndex: 1000 }}>
-      <div className='h-10vh flex justify-between items-center text-white bg-black px-20 py-4'>
+      <div className='h-10vh flex justify-between items-center text-white  px-20 py-4'>
         {/* Wrap the logo within Link component to navigate to home */}
-        <Link to='/' className='text-3xl font-bold text-[#00df9a]'>
-          DeliverEase
+        <Link to='/' className='text-3xl font-bold text-[#785f24]'>
+          GatherCloud
         </Link>
         <ul className={`lg:flex hidden gap-8 items-center font-normal ${click ? 'hidden' : ''}`}>
 

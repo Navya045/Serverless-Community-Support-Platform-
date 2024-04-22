@@ -8,7 +8,7 @@ const Navbar = () => {
   
   return (
     // Add a bottom border that matches the sidebar's bottom border
-    <div className="flex justify-end items-center px-6 bg-white h-12 border-b border-gray-200">
+    <div className="flex justify-end items-center px-6 bg-white border-b border-gray-200 h-12 p-10">
       {/* User Profile Section */}
       <div className="flex items-center">
         <AccountCircleIcon className="text-gray-600" /> {/* User Icon */}

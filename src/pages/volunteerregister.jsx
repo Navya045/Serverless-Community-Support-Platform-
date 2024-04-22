@@ -1,29 +1,44 @@
-// import React from 'react';
-
-// const VolunteerRegister = () => {
-//   return (
-//     <div className="volunteer-register">
-//       <h1>Register as a Volunteer</h1>
-//       {/* Form fields for volunteer registration go here */}
-//     </div>
-//   );
-// }
-
-// export default VolunteerRegister;
 
 
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
+function VolunteerRegisterForm() {
+  const navigate = useNavigate(); 
+    const [currentStep, setCurrentStep] = useState(1);
 
+    const nextStep = () => {
+        setCurrentStep(currentStep + 1);
+    };
 
-import React from 'react';
+    const prevStep = () => {
+        setCurrentStep(currentStep - 1);
+    };
 
-const VolunteerRegister = () => {
-  return (
-    <div className="volunteer-register max-w-4xl mx-auto p-4">
-      <h1 className="text-lg font-bold mb-4">Register as a Volunteer</h1>
-      <form className="grid grid-cols-1 gap-4">
-        {/* Personal Information */}
-        <div>
+    const submitForm = () => {
+        // Handle form submission
+        alert('Form submitted');
+        navigate('/dashboard')
+    };
+
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gray-100">
+      <div className="w-full max-w-4xl p-5 bg-white shadow-xl rounded-lg">
+          <h1 className="text-lg text-[#00df9a] font-bold mb-6 text-center">Register as a Volunteer</h1>
+          {/* Progress Bar */}
+          <div className="flex items-center justify-center mb-6">
+              <div className="flex items-center">
+                  <div className={`h-3 w-3 rounded-full ${currentStep === 1 ? 'bg-blue-500' : 'bg-gray-300'}`}></div>
+                  <div className="flex-auto border-t-2 transition duration-500 ease-in-out ${currentStep > 1 ? 'border-blue-500' : 'border-gray-300'}"></div>
+                  <div className={`h-3 w-3 rounded-full ${currentStep === 2 ? 'bg-blue-500' : 'bg-gray-300'}`}></div>
+                  <div className="flex-auto border-t-2 transition duration-500 ease-in-out ${currentStep > 2 ? 'border-blue-500' : 'border-gray-300'}"></div>
+                  <div className={`h-3 w-3 rounded-full ${currentStep === 3 ? 'bg-blue-500' : 'bg-gray-300'}`}></div>
+              </div>
+          </div>
+            <form className="grid grid-cols-1 gap-4">
+                {currentStep === 1 && (
+                    <>
+                        <div>
           <label htmlFor="firstName" className="block">First name <span className="text-red-500">*</span></label>
           <input type="text" id="firstName" name="firstName" required className="mt-1 block w-full max-w-lg px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"/>
         </div>
@@ -61,8 +76,6 @@ const VolunteerRegister = () => {
           <label htmlFor="address" className="block">Address <span className="text-red-500">*</span></label>
           <input type="text" id="address" name="address" required className="mt-1 block w-full max-w-lg px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"/>
         </div>
-
-        {/* Availability */}
         <div>
           <label htmlFor="hoursPerWeek" className="block">How many hours per week are you available to volunteer?</label>
           <input type="number" id="hoursPerWeek" name="hoursPerWeek" className="mt-1 block w-full max-w-lg px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"/>
@@ -72,10 +85,11 @@ const VolunteerRegister = () => {
           <textarea id="availableTimes" name="availableTimes" className="mt-1 block w-full max-w-lg px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"></textarea>
         </div>
 
-
-
-        {/* Experience and Background */}
-        <div>
+                    </>
+                )}
+                {currentStep === 2 && (
+                    <>
+                      <div>
           <label htmlFor="volunteerExperience" className="block">Do you have any previous volunteer experience? If so, please describe. <span className="text-red-500">*</span></label>
           <textarea id="volunteerExperience" name="volunteerExperience" required className="mt-1 block w-full max-w-lg px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"></textarea>
         </div>
@@ -105,7 +119,11 @@ const VolunteerRegister = () => {
           <label htmlFor="empathyExample" className="block">Can you provide an example of a time when you demonstrated empathy and understanding?</label>
           <textarea id="empathyExample" name="empathyExample" className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"></textarea>
         </div>
-{/* Training and Development */}
+                    </>
+                )}
+                {currentStep === 3 && (
+                    <>
+                       {/* Training and Development */}
         <div>
           <label htmlFor="undergoTraining" className="block">Are you willing to undergo training to improve your skills and understanding of the needs of senior citizens? <span className="text-red-500">*</span></label>
           <input type="checkbox" id="undergoTraining" name="undergoTraining" required className="mt-1 block"/>
@@ -139,13 +157,25 @@ const VolunteerRegister = () => {
           <label htmlFor="backgroundCheck" className="block">Do you consent to a background check as part of the volunteer screening process? <span className="text-red-500">*</span></label>
           <input type="checkbox" id="backgroundCheck" name="backgroundCheck" required className="mt-1 block"/>
         </div>
+                    </>
+                )}
 
-        <div className="mt-4">
-          <button type="submit" className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600">Submit</button>
+                <div className="mt-4 flex justify-between">
+                    {currentStep > 1 && (
+                        <button type="button" onClick={prevStep} className="px-4 py-2 bg-gray-500 text-white rounded-md hover:bg-gray-600">Previous</button>
+                    )}
+                    {currentStep < 3 && (
+                        <button type="button" onClick={nextStep} className="px-4 py-2 bg-[#00df9a] text-white rounded-md hover:bg-blue-600">Next</button>
+                    )}
+                    {currentStep === 3 && (
+                        <button type="button" onClick={submitForm} className="px-4 py-2 bg-[#00df9a] text-white rounded-md hover:bg-blue-600">Submit</button>
+                    )}
+                </div>
+            </form>
         </div>
-      </form>
-    </div>
-  );
+        </div>
+    );
 }
 
-export default VolunteerRegister;
+export default VolunteerRegisterForm;
+
