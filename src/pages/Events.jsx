@@ -5,7 +5,11 @@ import paint from './../assets/paint.png';
 import ferry from './../assets/ferry.png';
 import picnic from './../assets/picnic.png';
 import movie from './../assets/movie.png';
+import techStartup from './../assets/techStartup.webp';
 import HoosierCosmic from './../assets/HoosierCosmic.png';
+import Little500 from './../assets/Little500.webp';
+import kaneBrown from './../assets/kaneBrown.webp';
+import Fashion from './../assets/Fashion.webp';
 import Navigation from '../components/Navigation';
 import Sidenav from '../components/Sidenav';
 import Adminnav from '../components/Adminnav';
@@ -42,10 +46,10 @@ const Events = () => {
     },
     {
       id: 'event2',
-      title: 'Mind & Movement Workshop at GatherCloud',
-      description: 'Very often seniors sink away into their homes with no mental or physical stimulation. Goodfellows refuses to accept this and we put together happy activities and games based on that to help keep their mind sharp and fight aging.',
-      imageUrl: workshop,
-      tags: ['Spirituality', 'Health', 'Networking Event'],
+      title: 'Little 500',
+      description: 'This event is an iconic annual bike race featuring teams of students competing in a relay-style competition on a track, celebrated for its high energy and community spirit.',
+      imageUrl: Little500,
+      tags: ['Sports'],
     },
     {
       id: 'event3',
@@ -74,7 +78,28 @@ const Events = () => {
       description: 'Inox helped us curate a special movie night of endless wonder and popcorn, recliner seats and a 3D screening of a Hollywood favorite for our GrandPals!',
       imageUrl: movie,
       tags: ['Movie', 'Family', 'Celebration Party'],
-    }
+    },
+    {
+        id: 'event7',
+        title: 'Kane Concert',
+        description: 'Country star Kane Brown electrifies Indiana University Bloomington with a vibrant live concert performance.',
+        imageUrl: kaneBrown,
+        tags: ['Concert', 'Family'],
+      },
+      {
+        id: 'event8',
+        title: 'Anatomy Fashion Show',
+        description: 'This fashion event in Indiana Bloomington is a vibrant community gathering showcasing local designers and trends, celebrated with runway shows and creative workshops!',
+        imageUrl: Fashion,
+        tags: ['Fashion', 'Family', ' Community Festival'],
+      },
+      {
+        id: 'event9',
+        title: 'Tech startup week in Bloomington',
+        description: 'Techstars Startup Week in Bloomington ignites entrepreneurial spirits with a showcase of innovation and networking.',
+        imageUrl: techStartup,
+        tags: ['Technical Event', 'Networking Event'],
+      }
   ]);
 
   // Calculate all unique tags from events
@@ -102,7 +127,7 @@ const Events = () => {
           <div className="flex flex-1 flex-col md:flex-row p-5 gap-4">
             <aside className="sticky top-0 w-64" style={{ height: 'calc(100vh - 80px)', overflowY: 'auto', marginRight: '20px' }}>
               <TagsFilter
-                tags={['Community Festival', 'Networking Event', 'Celebration Party', 'Charity Fundraiser']}
+                tags={['Community Festival', 'Networking Event', 'Celebration Party', 'Charity Fundraiser', 'Sports', 'Technical Event', 'Concert', 'Arts Event']}
                 selectedTags={selectedTags}
                 onTagToggle={toggleTag}
               />
