@@ -86,7 +86,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faPhone, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
-import truckImage from '../assets/path-truck.png'; // Adjust the path to your image
+import truckImage from '../assets/gt 2.jpg'; // Adjust the path to your image
 
 const Contact = () => {
   return (
@@ -97,9 +97,9 @@ const Contact = () => {
             CONTACT US
           </h1>
           <div className='my-4'>
-            <p className="text-xl mb-6"><FontAwesomeIcon icon={faEnvelope} className="mr-2 text-black" /><span className="font-bold text-black pr-3">Email:</span>example@example.com</p>
+            <p className="text-xl mb-6"><FontAwesomeIcon icon={faEnvelope} className="mr-2 text-black" /><span className="font-bold text-black pr-3">Email:</span>gathercloud@gmail.com</p>
             <p className="text-xl mb-6"><FontAwesomeIcon icon={faPhone} className="mr-2 text-black" /><span className="font-bold text-black pr-2">Phone:</span> 123-456-7890</p>
-            <p className="text-xl mb-6"><FontAwesomeIcon icon={faMapMarkerAlt} className="mr-2 text-black" /><span className="font-bold text-black pr-2">Address:</span> 123 Street, City, Country</p>
+            <p className="text-xl mb-6"><FontAwesomeIcon icon={faMapMarkerAlt} className="mr-2 text-black" /><span className="font-bold text-black pr-2">Address:</span> 3209 E, Bloomington, Indiana</p>
             
           </div>
       
@@ -110,7 +110,7 @@ const Contact = () => {
         </div>
         
         <p className='text-black font-bold text-3xl p-2 font-lilita-one'>
-        Complex Deliveries Made Simple
+        Effortless Event Coordination
         </p>
         
       </div>

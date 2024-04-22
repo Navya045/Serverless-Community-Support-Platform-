@@ -7,23 +7,22 @@ import Icon from './Icon'; // Adjust the import path to where your Icon componen
 const featuresData = [
   {
     "icon": "faMapMarkerAlt",
-    "title": "Real-time Tracking",
-    "text": "Enables customers and delivery providers to monitor delivery status and location in real-time, enhancing transparency and reducing uncertainty through GPS integration."
-  },
-  {
+    "title": "Personalized Recommendations",
+    "text": " GatherCloud’s intelligent recommendation engine tailors event suggestions to individual preferences and historical engagement, ensuring that community members discover activities that resonate with them. This personalized approach increases participation rates and fosters a more connected community."
+  },{
     "icon": "faRoute",
-    "title": "Route Optimization",
-    "text": "Optimizes delivery routes by analyzing factors like location, traffic, and priority, minimizing costs, and improving efficiency for timely deliveries and enhanced customer satisfaction."
+    "title": "Live Event Updates Based on Location",
+    "text": "Utilizing geolocation technology, GatherCloud provides real-time updates on events happening nearby, alerting users to opportunities for engagement right in their vicinity. This feature enhances the community experience by promoting local events and facilitating spontaneous participation."
   },
   {
     "icon": "faBell",
-    "title": "Notifications",
-    "text": "Notifies delivery providers of new assignments, route changes, or urgent requests, ensuring prompt responsiveness and efficient task management."
+    "title": "Event Notifications",
+    "text": "GatherCloud incorporates a robust notification system that keeps community members informed and engaged with relevant events. This system ensures that individuals receive timely alerts about activities that match their interests and preferences."
   },
   {
     "icon": "faEnvelope",
-    "title": "Automated Communication",
-    "text": " Customers receive automated order confirmation and status updates throughout the delivery process, ensuring timely acknowledgment and real-time information."
+    "title": "Support Network",
+    "text": "GatherCloud acts as a support network, identifying and highlighting opportunities for community members to assist those in need. Whether it's volunteering for local charities, contributing to community drives, or supporting local businesses, GatherCloud makes it easier for individuals to contribute positively to their community."
   }
 ];
 
@@ -39,11 +38,11 @@ const Features = () => {
       <div className="container mx-auto">
         <div className="w-full md:w-10/12 mx-auto py-12">
           <h2 className="text-4xl font-bold mb-12 text-darktheme">
-            Why DeliverEase?
+            Why GatherCloud?
           </h2>
         </div>
         <div className="flex flex-wrap justify-center pb-20 ">
-          <p className="leading-relaxed mx-3">Bringg enables a hassle-free delivery experience, offering convenient delivery options while still ensuring more drops per day. Bringg turns delivery into a unique differentiator for over 800 customers, with over 200 million orders shipped every year.</p>
+          <p className="leading-relaxed mx-3">GatherCloud empowers communities by streamlining the organization and participation of local events, providing a platform that not only connects individuals but also aids in supporting those in need. With a focus on inclusivity and engagement, GatherCloud serves as a pivotal tool for community development and support, managing hundreds of events and touching thousands of lives annually.</p>
         </div>
         <div className="flex flex-wrap justify-center">
           {featuresData.map((feature, index) => (
@@ -64,34 +63,6 @@ const Features = () => {
     </div>
   );
 };
-//   return (
-//     <div id="features" className="text-center bg-floralwhite">
-//       <div className="container mx-auto">
-//         <div className="w-full md:w-10/12 mx-auto py-12">
-//           <h2 className="text-4xl font-bold mb-12 text-darktheme">
-//             Why DeliverEase?
-//           </h2>
-//         </div>
-//         <div className="flex flex-wrap justify-center pb-20 ">
-//           <p>Bringg enables a hassle-free delivery experience, offering convenient delivery options while still ensuring more drops per day. Bringg turns delivery into a unique differentiator for over 800 customers, with over 200 million orders shipped every year.</p></div>
-//         <div className="flex flex-wrap justify-center">
-//           {featuresData.map((feature, index) => (
-//             <div key={`${feature.title}-${index}`} className="px-4 w-1/2 md:w-1/4 mb-8">
-//               <div className="text-4xl mx-auto mb-5 w-24 h-24 flex items-center justify-center rounded-full bg-black shadow-md">
-//                 <Icon iconName={feature.icon} />
-//               </div>
-//               <h3 className="text-xl font-semibold text-darktheme">
-//                 {feature.title}
-//               </h3>
-//               {/* Apply a max-height based on the number of lines and line-height */}
-//               <p className={`mt-2 text-gray-700 overflow-hidden leading-${lineHeight} h-${maxHeight}`}>
-//                 {feature.text}
-//               </p>
-//             </div>
-//           ))}
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
+
+
 export default Features;

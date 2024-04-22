@@ -32,6 +32,8 @@ import { loadStripe } from '@stripe/stripe-js';
 import AdminServices from './pages/AdminServices.jsx';
 import Chat from './pages/Chat.jsx';
 import AdminReviews from './pages/AdminReviews.jsx';
+import VolunteerRegister from './pages/volunteerregister.jsx'
+import OrganizationRegister from './pages/organizeregister.jsx';
 
 const stripePromise = loadStripe('pk_test_51P4XOb04o0QsZsCzFDD16nbBHkwLG98v7UpPaEhOijTcjfVpxXOJ9DnIQ1NHIo8f042alKwzsyxDcW5058IKQxIE00r0asVmTN');
 
@@ -74,6 +76,9 @@ const App = () => {
             <Route path="/Adminservice" element={<AdminServices />} />
             <Route path="/chat" element={<Chat />} />
             <Route path="/reviews" element={<AdminReviews />} />
+            <Route path="/register/organize" element={<OrganizationRegister/>} />
+            <Route path="/register/volunteer" element={<VolunteerRegister/>} />
+
        </Routes>
         </GoogleOAuthProvider>
         <Chatbot /> {/* Add the chatbot to your app */}

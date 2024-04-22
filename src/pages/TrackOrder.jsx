@@ -35,7 +35,7 @@ const TrackOrder = () => {
       <div className="w-full max-w-md mx-auto flex flex-col justify-center items-center pt-20">
   <input
     type="text"
-    placeholder="Enter Order ID..."
+    placeholder="Enter Service ID..."
     className="input input-bordered w-full border border-gray-300 rounded p-2 mb-4"
     value={orderId}
     onChange={(e) => setOrderId(e.target.value)}
@@ -44,7 +44,7 @@ const TrackOrder = () => {
     className="bg-white hover:bg-gray-400 text-[#00df9a] font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
     onClick={handleSearch}
   >
-    Track Order
+    Track Service
   </button>
 </div>
 

@@ -1,7 +1,7 @@
 
 
 import React, { useState } from 'react';
-import DeliveryImg from '../assets/door-to-door-delivery-flat-deliveryman-courier-vector-29765876.jpg';
+import DeliveryImg from '../assets/login in.webp';
 import { useNavigate } from 'react-router-dom';
 import ReCAPTCHA from "react-google-recaptcha";
 
