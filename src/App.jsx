@@ -34,6 +34,7 @@ import Chat from './pages/Chat.jsx';
 import AdminReviews from './pages/AdminReviews.jsx';
 import VolunteerRegister from './pages/volunteerregister.jsx'
 import OrganizationRegister from './pages/organizeregister.jsx';
+import Events from './pages/Events.jsx';
 
 const stripePromise = loadStripe('pk_test_51P4XOb04o0QsZsCzFDD16nbBHkwLG98v7UpPaEhOijTcjfVpxXOJ9DnIQ1NHIo8f042alKwzsyxDcW5058IKQxIE00r0asVmTN');
 
@@ -78,6 +79,7 @@ const App = () => {
             <Route path="/reviews" element={<AdminReviews />} />
             <Route path="/register/organize" element={<OrganizationRegister/>} />
             <Route path="/register/volunteer" element={<VolunteerRegister/>} />
+            <Route path="/Events" element={<Events/>} />
 
        </Routes>
         </GoogleOAuthProvider>

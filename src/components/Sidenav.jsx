@@ -36,7 +36,7 @@ const Sidenav = () => {
           </Link>
           {/* ... other menu items ... */}
 
-          <Link to="/Employees" style={{ textDecoration: "none" }}>
+          <Link to="/Events" style={{ textDecoration: "none" }}>
             <li className='flex items-center px-1.25 py-1.25 cursor-pointer mb-7'> 
               <PersonOutlineIcon className="text-base text-[#785f24]" />
               <span className="text-xl font-semibold text-gray-600 ml-2.5">Events</span>
