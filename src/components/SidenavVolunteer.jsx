@@ -19,14 +19,14 @@ const SidenavVolunteer = () => {
   return (
     <div className="flex flex-col border-r border-gray-200 bg-[#29292d] min-h-screen w-60">
       <div className="h-12 flex items-center justify-center p-10">
-        <Link to="/Dashboard" className="no-underline">
+        <Link to="/dashboardvolunteer" className="no-underline">
           <span className="text-2xl font-bold text-[#785f24]">GatherCloud</span>
         </Link>
       </div>
       <hr className="border-t border-gray-200" />
       <div className="flex-grow p-2.5 text-xl">
         <ul className="list-none m-5 p-0">
-        <Link to="/Dashboard" style={{ textDecoration: "none" }}>
+        <Link to="/dashboardvolunteer" style={{ textDecoration: "none" }}>
 
           {/* <p className="text-xs font-bold text-gray-600 mt-4 mb-2">MAIN</p> */}
           <li className="flex items-center px-1.25 py-1.25 cursor-pointer  mb-7">
@@ -36,7 +36,7 @@ const SidenavVolunteer = () => {
           </Link>
           {/* ... other menu items ... */}
 
-          <Link to="/Events" style={{ textDecoration: "none" }}>
+          <Link to="/dashboardvolunteer/events" style={{ textDecoration: "none" }}>
             <li className='flex items-center px-1.25 py-1.25 cursor-pointer mb-7'> 
               <PersonOutlineIcon className="text-base text-[#785f24]" />
               <span className="text-xl font-semibold text-gray-600 ml-2.5">Events</span>
@@ -48,7 +48,7 @@ const SidenavVolunteer = () => {
               <span className="text-xl font-semibold text-gray-600 ml-2.5">Documents</span>
             </li>
           </Link>
-          <Link to="/Orders" style={{ textDecoration: "none" }}>
+          <Link to="/dashboardvolunteer/profile" style={{ textDecoration: "none" }}>
 
           <li className='flex items-center px-1.25 py-1.25 cursor-pointer mb-7'>
             <CreditCardIcon className="text-base text-[#785f24]" />
@@ -61,7 +61,7 @@ const SidenavVolunteer = () => {
             <span className="text-xl font-semibold text-gray-600 ml-2.5">Applications</span>
           </li> 
           </Link>   
-          <Link to="/Home" style={{ textDecoration: "none" }}>        
+          <Link to="/" style={{ textDecoration: "none" }}>        
           <li className='flex items-center px-1.25 py-1.25 cursor-pointer  mb-7'>
             <ExitToAppIcon className="text-base text-[#785f24]" />
             <span className="text-xl font-semibold text-gray-600 ml-2.5">Logout</span>

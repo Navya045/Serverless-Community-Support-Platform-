@@ -61,7 +61,7 @@ const Sidenav = () => {
             <span className="text-xl font-semibold text-gray-600 ml-2.5">Applications</span>
           </li> 
           </Link>   
-          <Link to="/Home" style={{ textDecoration: "none" }}>        
+          <Link to="/" style={{ textDecoration: "none" }}>        
           <li className='flex items-center px-1.25 py-1.25 cursor-pointer  mb-7'>
             <ExitToAppIcon className="text-base text-[#785f24]" />
             <span className="text-xl font-semibold text-gray-600 ml-2.5">Logout</span>

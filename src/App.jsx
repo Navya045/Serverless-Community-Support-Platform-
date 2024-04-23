@@ -38,7 +38,8 @@ import Events from './pages/Events.jsx';
 import DashboardV from './pages/DashboardVolunteer.jsx';
 import ApplicationsVolunteer from './pages/Applicationsvolunteer.jsx';
 import Documentsvolunteer from './pages/documentsvolunteer.jsx';
-
+import Eventsvolunteer from './pages/eventsvolunteer.jsx';
+import ProfileVolunteer from './pages/profilevolunteer.jsx';
 
 
 const stripePromise = loadStripe('pk_test_51P4XOb04o0QsZsCzFDD16nbBHkwLG98v7UpPaEhOijTcjfVpxXOJ9DnIQ1NHIo8f042alKwzsyxDcW5058IKQxIE00r0asVmTN');
@@ -87,9 +88,8 @@ const App = () => {
             <Route path="/Events" element={<Events/>} />
             <Route path="/dashboardvolunteer/application" element={<ApplicationsVolunteer/>} />
             <Route path="/dashboardvolunteer/documents" element={<Documentsvolunteer/>} />
-
-
-            
+            <Route path="/dashboardvolunteer/events" element={<Eventsvolunteer/>} />
+            <Route path="/dashboardvolunteer/profile" element={<ProfileVolunteer/>} />
 
 
        </Routes>
