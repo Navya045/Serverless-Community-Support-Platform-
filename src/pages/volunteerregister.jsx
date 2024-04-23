@@ -1,7 +1,6 @@
-
-
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+
 
 function VolunteerRegisterForm() {
   const navigate = useNavigate(); 
@@ -22,11 +21,12 @@ function VolunteerRegisterForm() {
     };
 
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="w-full max-w-4xl p-5 bg-white shadow-xl rounded-lg">
-          <h1 className="text-lg text-[#00df9a] font-bold mb-6 text-center">Register as a Volunteer</h1>
-          {/* Progress Bar */}
-          <div className="flex items-center justify-center mb-6">
+     <div className="flex flex-col min-h-screen bg-gray-100">
+      
+       <div className="flex-grow flex items-center justify-center">
+         <div className="w-full max-w-4xl p-5 bg-white shadow-xl rounded-lg">
+           <h1 className="text-lg text-[#00df9a] font-bold mb-6 text-center">Register as a Volunteer</h1>
+             <div className="flex items-center justify-center mb-6">
               <div className="flex items-center">
                   <div className={`h-3 w-3 rounded-full ${currentStep === 1 ? 'bg-blue-500' : 'bg-gray-300'}`}></div>
                   <div className="flex-auto border-t-2 transition duration-500 ease-in-out ${currentStep > 1 ? 'border-blue-500' : 'border-gray-300'}"></div>
@@ -172,6 +172,7 @@ function VolunteerRegisterForm() {
                     )}
                 </div>
             </form>
+        </div>
         </div>
         </div>
     );

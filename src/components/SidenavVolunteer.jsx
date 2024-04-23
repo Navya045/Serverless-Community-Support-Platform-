@@ -42,7 +42,7 @@ const SidenavVolunteer = () => {
               <span className="text-xl font-semibold text-gray-600 ml-2.5">Events</span>
             </li>
           </Link>
-          <Link to="/addevents" style={{ textDecoration: "none" }}>
+          <Link to="/dashboardvolunteer/documents" style={{ textDecoration: "none" }}>
             <li className='flex items-center px-1.25 py-1.25 cursor-pointer  mb-7'>
               <StoreIcon className="text-base text-[#785f24]" />
               <span className="text-xl font-semibold text-gray-600 ml-2.5">Documents</span>
@@ -55,7 +55,7 @@ const SidenavVolunteer = () => {
             <span className="text-xl font-semibold text-gray-600 ml-2.5">Profile</span>
           </li>
           </Link>
-          <Link to="/reviews" style={{ textDecoration: "none" }}>
+          <Link to="/dashboardvolunteer/application" style={{ textDecoration: "none" }}>
           <li className='flex items-center px-1.25 py-1.25 cursor-pointer mb-7'>
             <ReviewsIcon className="text-base text-[#785f24]" />
             <span className="text-xl font-semibold text-gray-600 ml-2.5">Applications</span>

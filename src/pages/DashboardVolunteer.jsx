@@ -5,7 +5,7 @@ import Orders from './Orders';
 import MapView from './MapView';
 import AdminnavVolunteer from '../components/AdminnavVolunteer';
 
-const Dashboard = () => {
+const DashboardV = () => {
   const [totalOrders, setTotalEvents] = useState(0);
   const [orderLocationsCount, setOrderLocationsCount] = useState(0);
   const [orderParticipation, setorderParticipation] = useState(0);
@@ -82,5 +82,5 @@ const Dashboard = () => {
   );
 }
 
-export default Dashboard;
+export default DashboardV;
 

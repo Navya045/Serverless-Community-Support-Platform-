@@ -35,6 +35,11 @@ import AdminReviews from './pages/AdminReviews.jsx';
 import VolunteerRegister from './pages/volunteerregister.jsx'
 import OrganizationRegister from './pages/organizeregister.jsx';
 import Events from './pages/Events.jsx';
+import DashboardV from './pages/DashboardVolunteer.jsx';
+import ApplicationsVolunteer from './pages/Applicationsvolunteer.jsx';
+import Documentsvolunteer from './pages/documentsvolunteer.jsx';
+
+
 
 const stripePromise = loadStripe('pk_test_51P4XOb04o0QsZsCzFDD16nbBHkwLG98v7UpPaEhOijTcjfVpxXOJ9DnIQ1NHIo8f042alKwzsyxDcW5058IKQxIE00r0asVmTN');
 
@@ -51,7 +56,7 @@ const App = () => {
             <Route path="/service" element={<Service />} />
             <Route path="/order" element={<OrderForm />} />
             <Route path="/Dashboard" element={<Dashboard />} />
-            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/dashboardvolunteer" element={<DashboardV />} />
             <Route path="/orders" element={<Orders />} />
             <Route path="/employees" element={<Drivers />} />
             <Route path="/Orders" element={<Orders />} />
@@ -80,6 +85,10 @@ const App = () => {
             <Route path="/register/organize" element={<OrganizationRegister/>} />
             <Route path="/register/volunteer" element={<VolunteerRegister/>} />
             <Route path="/Events" element={<Events/>} />
+            <Route path="/dashboardvolunteer/application" element={<ApplicationsVolunteer/>} />
+            <Route path="/dashboardvolunteer/documents" element={<Documentsvolunteer/>} />
+
+
             
 
 
