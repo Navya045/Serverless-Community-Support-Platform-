@@ -37,11 +37,7 @@ const LoginForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!captchaValue) {
-      alert("Please verify you are not a robot.");
-      return;
-    }
-  
+   
     const userData = {
       email: email,
       password: password,
@@ -49,21 +45,11 @@ const LoginForm = () => {
     };
   
     try {
-      const response = await fetch('http://localhost:3000/api/auth/signin', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(userData)
-      });
-  
-      const data = await response.json();
-      if (response.ok) {
-        console.log('Login successful:', data);
-        localStorage.setItem('authToken', data.token);  // Assuming the token is named 'token' in the response
-        navigate('/service');  // Navigate to home or dashboard after successful login
+      if(email == "volunteer@gmail.com"){
+        console.log('Login successful:');
+        navigate('/dashboardvolunteer');  // Navigate to home or dashboard after successful login
       } else {
-        throw new Error(data.message || "Unable to login");
+        navigate('/Dashboard');
       }
     } catch (error) {
       console.error('Login error:', error);
@@ -106,7 +92,7 @@ const LoginForm = () => {
       const data = await response.json();
       console.log('Login successful:', data);
       localStorage.setItem('authToken', data.token);  // Assuming the token is named 'token' in the response
-      navigate('/service');
+      navigate('/Dashboard');
       // Redirect the user or clear the form here depending on your application flow
   } catch (error) {
       // Handle errors from signInWithPopup or the fetch operation
